@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Login"
+    android:background="@drawable/background_layouts">
+
+
+    <LinearLayout
+        android:id="@+id/cardViewLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/cardview_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="75dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Welcome to Quizzy"
+            android:textColor="#CFCFCF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="75dp"
+            android:fontFamily="@font/inter_bold"
+            android:paddingBottom="47dp"
+            android:text="Let’s\nLogin !"
+            android:textColor="#FFFFFF"
+            android:textSize="50dp" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edtTxtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Email"
+        android:paddingLeft="25dp"
+        android:textColorHint="#CFCFCF"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewLogIn" />
+
+    <EditText
+        android:id="@+id/edtTxtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Password"
+        android:paddingLeft="25dp"
+        android:textColorHint="#CFCFCF"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtEmail" />
+
+    <TextView
+        android:id="@+id/txtForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="242dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="48dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Forgot Password?"
+        android:textColor="#CFCFCF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword" />
+
+    <TextView
+        android:id="@+id/txtLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="34dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtForgot" />
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="111dp"
+        android:text="or Login with "
+        android:textColor="#CFCFCF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLogin" />
+
+    <LinearLayout
+        android:id="@+id/llImage"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/google_bg"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesc">
+
+        <ImageView
+            android:id="@+id/imgGoogle"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:padding="6dp"
+            android:src="@drawable/google" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPrivatePolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="146dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="147dp"
+
+        android:layout_marginBottom="3dp"
+        android:text="Privacy Policy"
+        android:textColor="#CFCFCF"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llImage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/linear_layout_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrivatePolicy">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/inter_regular"
+            android:paddingLeft="22dp"
+            android:text="Don’t  have an account ?"
+            android:textColor="#CFCFCF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtRedirect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Create New One"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

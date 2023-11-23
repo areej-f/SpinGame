@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_layouts"
+    tools:context=".SignIn">
+
+    <LinearLayout
+        android:id="@+id/cardViewLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_bg"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="75dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Welcome to Quizzy"
+            android:textColor="#CFCFCF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="75dp"
+            android:fontFamily="@font/inter_bold"
+            android:paddingBottom="17dp"
+            android:text="Let’s\nSign In !"
+            android:textColor="#FFFFFF"
+            android:textSize="50dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtTxtName"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Name"
+        android:paddingLeft="25dp"
+        android:textColorHint="#CFCFCF"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewLogIn" />
+
+    <EditText
+        android:id="@+id/edtTxtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Email"
+        android:paddingLeft="25dp"
+        android:textColorHint="#CFCFCF"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtName" />
+
+    <EditText
+        android:id="@+id/edtTxtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Password"
+        android:paddingLeft="25dp"
+        android:textColorHint="#CFCFCF"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtEmail" />
+
+    <EditText
+        android:id="@+id/edtTxtReferralCode"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Refferal Code"
+        android:paddingLeft="25dp"
+        android:textColorHint="#CFCFCF"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword" />
+
+
+    <TextView
+        android:id="@+id/txtSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="34dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtTxtReferralCode" />
+
+    <TextView
+        android:id="@+id/txtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="111dp"
+        android:text="or Login with "
+        android:textColor="#CFCFCF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSignIn" />
+
+    <LinearLayout
+        android:id="@+id/llImage"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/google_bg"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDesc">
+
+        <ImageView
+            android:id="@+id/imgGoogle"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_margin="6dp"
+            android:padding="6dp"
+            android:src="@drawable/google" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtPrivatePolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="146dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="147dp"
+
+        android:layout_marginBottom="3dp"
+        android:text="Privacy Policy"
+        android:textColor="#CFCFCF"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llImage" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

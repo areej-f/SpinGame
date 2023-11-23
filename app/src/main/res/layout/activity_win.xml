@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Win"
+    android:background="@drawable/background_layouts">
+
+    <LinearLayout
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/survey_bg"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Great Victory"
+            android:textColor="@color/white"
+            android:textSize="43dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgProf"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="93dp"
+        android:background="@drawable/profile_img_bg"
+        android:src="@drawable/rocket"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llHeader" />
+
+    <GridLayout
+        android:id="@+id/gridSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="33dp"
+
+        android:background="@drawable/edit_text_background"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgProf">
+
+        <!--        Correct Answer-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="27dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Correct Answer"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCorrectAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#808BC072"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:cornerRadius="18dp" />
+        </LinearLayout>
+
+
+        <!--        Diamond-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_row="0"
+            android:layout_column="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="27dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="33dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Diamond"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiamond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#80A7B330"
+                android:text="15"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:cornerRadius="18dp" />
+        </LinearLayout>
+
+        <!--        Incorrect Answer-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="27dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Incorrect Answer"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIncorrectAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#80F68080"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:cornerRadius="18dp" />
+        </LinearLayout>
+
+
+        <!--Earn Coin-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_row="1"
+            android:layout_column="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="27dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="33dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Earn Coin"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEarnCoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#6B77B9"
+                android:text="20"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:cornerRadius="18dp" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="33dp"
+        android:backgroundTint="#1BB121"
+        android:fontFamily="@font/inter_bold"
+        android:paddingLeft="81dp"
+        android:paddingTop="12dp"
+        android:paddingRight="82dp"
+        android:paddingBottom="11dp"
+        android:text="Play Again"
+        android:textSize="30dp"
+        app:cornerRadius="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridSummary">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+    <!--Rate Us-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="33dp"
+        android:backgroundTint="#809D9D9B"
+        android:fontFamily="@font/inter_bold"
+        android:paddingLeft="103dp"
+        android:paddingTop="12dp"
+        android:paddingRight="103dp"
+        android:paddingBottom="11dp"
+        android:text="Rate Us"
+        android:textSize="30dp"
+        app:cornerRadius="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayAgain">
+
+    </com.google.android.material.button.MaterialButton>
+
+
+    <!--    Home-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="33dp"
+        android:backgroundTint="#809D9D9B"
+        android:fontFamily="@font/inter_bold"
+        android:paddingLeft="116dp"
+        android:paddingTop="12dp"
+        android:paddingRight="116dp"
+        android:paddingBottom="11dp"
+        android:text="Home"
+        android:textSize="30dp"
+        app:cornerRadius="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRating">
+
+    </com.google.android.material.button.MaterialButton>
+</androidx.constraintlayout.widget.ConstraintLayout>
