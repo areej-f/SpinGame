@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Wallet"
+    android:background="@drawable/background_layouts">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTop="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtWallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Wallet"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="23dp"
+            android:layout_marginRight="35dp"
+            android:src="@drawable/close" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGrp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/unselected_toggle_bg"
+        android:checkedButton="@+id/btnMyEarnings"
+
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <RadioButton
+            android:id="@+id/btnMyEarnings"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_bg"
+            android:button="@null"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:paddingTop="19dp"
+            android:paddingBottom="19dp"
+            android:text="My Earnings"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/btntransaction"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/unselected_toggle_bg"
+            android:button="@null"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:paddingTop="19dp"
+            android:paddingBottom="19dp"
+            android:text="Transaction"
+            android:textColor="#A4A4A4"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/radioGrp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
